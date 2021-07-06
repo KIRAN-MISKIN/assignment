@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+</head>
+<body class="bg" style="background-color: #ff2323;">
+        <h1 style="text-align: center; margin-top: 150px; font-size: 70px;">Hello, World!</h1>
+        <h3 style="text-align: center;">What color?</h3>
+
+        <section>
+            <div ></div>
+            <select class="selectcolor"  style="width: 350px; height: 40px; margin-left: 600px; font-family: chiller; font-size: 20px; color: purple;" onchange="changecolor(this)">
+                <option value="Red">Red</option>
+                <option value="hotpink">Hotpink</option>
+                <option value="skyblue">skyblue</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="orange">Orange</option>
+            </select>
+        </section>
+
+        <script>
+            function changecolor(getcolor)
+            {
+                let bg= document.querySelector('.bg');
+                let selectcolor = getcolor.value;
+                bg.style.background = selectcolor;
+
+            }
+        </script>
+
+
+</body>
+</html>

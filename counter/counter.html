@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./counter.css" type="text/css">
+    <title>Counter</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h2>Counter</h2>
+        <h1 id="countervalue">0</h1>
+        <div id="buttons">
+            <button id="decrement">Decrement</button>
+            <button id="reset">Reset</button>
+            <button id="increment">Increment</button>
+        </div>
+
+    </div>
+
+    <script>
+        let increment = document.querySelector("#increment");
+        let decrement = document.querySelector("#decrement");
+        let reset = document.querySelector("#reset");
+        let countervalue = document.querySelector("#countervalue");
+
+        let counter = 0;
+
+        increment.addEventListener("click" , ()=> {
+            counter++;
+            countervalue.innerText = counter;
+        });
+
+        decrement.addEventListener("click" , ()=> {
+            counter--;
+            countervalue.innerText = counter;
+        });
+
+        reset.addEventListener("click" , ()=> {
+            counter=0;
+            countervalue.innerText = counter;
+        });
+    </script>
+</body>
+</html>
